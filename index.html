@@ -9,14 +9,14 @@ function isNumber(value) {
 function calc(){
 let price = document.getElementsByName("price");
 let count = document.getElementsByName("count");
-let c = parseFloat(count[0].value);
-if(!Number.isInteger(c)){
-alert("Количество должно быть целым числом");
-return false;
-}
 let p = parseFloat(price[0].value);
 if(!isNumber(p)){
 alert("Введите число в поле цена");
+return false;
+}
+let c = parseFloat(count[0].value);
+if(!Number.isInteger(c)){
+alert("Количество должно быть целым числом");
 return false;
 }
 let calc = parseFloat(count[0].value) * parseFloat(price[0].value);
