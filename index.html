@@ -10,12 +10,12 @@ function calc(){
 let price = document.getElementsByName("price");
 let count = document.getElementsByName("count");
 let p = parseFloat(price[0].value);
-if(!isNumber(p) && p>0){
+if(!isNumber(p) || p<=0){
 alert("Введите положительное число в поле цена");
 return false;
 }
 let c = parseFloat(count[0].value);
-if(!Number.isInteger(c) && c>0){
+if(!Number.isInteger(c) || c<=0){
 alert("Количество должно быть целым положительным числом");
 return false;
 }
